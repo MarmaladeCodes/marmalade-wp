@@ -1,0 +1,23 @@
+{
+	"folders": [
+		{
+			"path": "../"
+		}
+	],
+	"settings": {
+		"editor.formatOnSave": true,
+		"files.eol": "\n",
+		"files.trimTrailingWhitespace": true,
+		"[php]": {
+			"editor.defaultFormatter": "valeryanm.vscode-phpsab"
+		},
+		"phpsab.executablePathCBF": "/usr/local/bin/phpcbf",
+		"phpsab.executablePathCS": "/usr/local/bin/phpcs",
+		"phpsab.fixerEnable": true,
+		"phpsab.snifferEnable": true, // disable this if you don't need suggestions
+		"phpsab.snifferShowSources": true,
+		"phpsab.standard": "WordPress",
+		"window.title": "${rootName}${separator}${folderPath}",
+		"workbench.editor.highlightModifiedTabs": true
+	}
+}

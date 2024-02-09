@@ -1,4 +1,4 @@
 *.code-workspace
-!etcms.code-workspace
+!mcms.code-workspace
 cache/*
 upgrade-temp-backup/*
