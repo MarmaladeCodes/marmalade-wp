@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit9722c19e535d86fc968bdbe1abcb61b0
+class ComposerStaticInit3bd8f09a8a131fbadbfe66f9581f17ee
 {
     public static $prefixLengthsPsr4 = array (
         'W' => 
@@ -243,6 +243,7 @@ class ComposerStaticInit9722c19e535d86fc968bdbe1abcb61b0
         'GraphQL\\Validator\\SDLValidationContext' => __DIR__ . '/..' . '/webonyx/graphql-php/src/Validator/SDLValidationContext.php',
         'GraphQL\\Validator\\ValidationContext' => __DIR__ . '/..' . '/webonyx/graphql-php/src/Validator/ValidationContext.php',
         'WPGraphQL\\Admin\\Admin' => __DIR__ . '/../..' . '/src/Admin/Admin.php',
+        'WPGraphQL\\Admin\\AdminNotices' => __DIR__ . '/../..' . '/src/Admin/AdminNotices.php',
         'WPGraphQL\\Admin\\GraphiQL\\GraphiQL' => __DIR__ . '/../..' . '/src/Admin/GraphiQL/GraphiQL.php',
         'WPGraphQL\\Admin\\Settings\\Settings' => __DIR__ . '/../..' . '/src/Admin/Settings/Settings.php',
         'WPGraphQL\\Admin\\Settings\\SettingsRegistry' => __DIR__ . '/../..' . '/src/Admin/Settings/SettingsRegistry.php',
@@ -364,6 +365,7 @@ class ComposerStaticInit9722c19e535d86fc968bdbe1abcb61b0
         'WPGraphQL\\Type\\Enum\\PostObjectsConnectionOrderbyEnum' => __DIR__ . '/../..' . '/src/Type/Enum/PostObjectsConnectionOrderbyEnum.php',
         'WPGraphQL\\Type\\Enum\\PostStatusEnum' => __DIR__ . '/../..' . '/src/Type/Enum/PostStatusEnum.php',
         'WPGraphQL\\Type\\Enum\\RelationEnum' => __DIR__ . '/../..' . '/src/Type/Enum/RelationEnum.php',
+        'WPGraphQL\\Type\\Enum\\ScriptLoadingStrategyEnum' => __DIR__ . '/../..' . '/src/Type/Enum/ScriptLoadingStrategyEnum.php',
         'WPGraphQL\\Type\\Enum\\TaxonomyEnum' => __DIR__ . '/../..' . '/src/Type/Enum/TaxonomyEnum.php',
         'WPGraphQL\\Type\\Enum\\TaxonomyIdTypeEnum' => __DIR__ . '/../..' . '/src/Type/Enum/TaxonomyIdTypeEnum.php',
         'WPGraphQL\\Type\\Enum\\TermNodeIdTypeEnum' => __DIR__ . '/../..' . '/src/Type/Enum/TermNodeIdTypeEnum.php',
@@ -453,9 +455,9 @@ class ComposerStaticInit9722c19e535d86fc968bdbe1abcb61b0
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit9722c19e535d86fc968bdbe1abcb61b0::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit9722c19e535d86fc968bdbe1abcb61b0::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit9722c19e535d86fc968bdbe1abcb61b0::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit3bd8f09a8a131fbadbfe66f9581f17ee::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit3bd8f09a8a131fbadbfe66f9581f17ee::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit3bd8f09a8a131fbadbfe66f9581f17ee::$classMap;
 
         }, null, ClassLoader::class);
     }
