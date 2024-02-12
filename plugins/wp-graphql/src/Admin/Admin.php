@@ -15,14 +15,14 @@ class Admin {
 	/**
 	 * Whether Admin Pages are enabled or not
 	 *
-	 * @var boolean
+	 * @var bool
 	 */
 	protected $admin_enabled;
 
 	/**
 	 * Whether GraphiQL is enabled or not
 	 *
-	 * @var boolean
+	 * @var bool
 	 */
 	protected $graphiql_enabled;
 
@@ -42,6 +42,9 @@ class Admin {
 		// Default is enabled.
 		$this->admin_enabled    = apply_filters( 'graphql_show_admin', true );
 		$this->graphiql_enabled = apply_filters( 'graphql_enable_graphiql', get_graphql_setting( 'graphiql_enabled', true ) );
+
+		$admin_notices = new AdminNotices();
+		$admin_notices->init();
 
 		// This removes the menu page for WPGraphiQL as it's now built into WPGraphQL
 		if ( $this->graphiql_enabled ) {

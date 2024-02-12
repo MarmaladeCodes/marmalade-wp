@@ -1,11 +1,10 @@
 name: Deploy to Dreamhost Server
 on:
+  push:
+    branches:
+      - develop
+      - main
   workflow_dispatch:
-  # Uncomment below for continuous deployment.
-  # push:
-  #   branches:
-  #     - develop
-  #     - main
 
 jobs:
   info:
