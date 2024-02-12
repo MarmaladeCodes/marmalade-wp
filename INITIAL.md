@@ -10,11 +10,11 @@
 
 1) Expand the "Advanced options".
 
-1) Enter a name (ie "MyApp CMS") as the site name.
+1) Enter "Marmalade CMS" as the site name.
 
-1) (Optional) Update the local domain (like "cms.myapp.local").
+1) (Optional) Update the local domain (like "cms.marmalade.local").
 
-1) (Optional) Update the location for the app (like `/Users/me/projects/myapp-cms`).
+1) (Optional) Update the location for the app (like `/Users/me/projects/marmalade-cms`).
 
 1) Press "Continue" in the bottom right corner.
 
@@ -37,11 +37,11 @@
 1) Press "Add Site" in the bottom right corner.
 
 Local should create a generic site with a MySQL database.
-The code will be located in the location defined in step 7 above (or the default `~/Local Sites/myapp-cms`).
+The code will be located in the location defined in step 7 above (or the default `~/Local Sites/marmalade-cms`).
 The folder structure in the site folder will be like:
 
 ```txt
-myapp-cms
+marmalade-cms
 ├── app
 │   └── public // Wordpress files
 ├── conf
@@ -58,13 +58,13 @@ In a terminal:
     rm -rf wp-content
     ```
 
-1) Clone this repo into `wp-content` (replace `my_org` and `my_healess_wordpress_repo_name`).
+1) Clone this repo into `wp-content`.
 
     ```sh
-    git clone git@github.com:my_org/my_healess_wordpress_repo_name.git wp-content
+    git clone git@github.com:jonryser/marmalade-wp.git wp-content
     ```
 
-1) Open the VS Code workspace file (`hw.code-workspace`) located inside the cloned repo.
+1) Open the VS Code workspace file (`etcm.code-workspace`) located inside the cloned repo.
 
 1) Go to extensions and search for `@recommended`.
 
@@ -72,7 +72,7 @@ In a terminal:
 
     *Pro tip*:
 
-    When installing extensions ins VS Code, you can install, then disable the extension.
+    When installing extensions ins VS Code, you can install, then completely disable the extension.
     This makes the extension available, but disabled globally.
     Then, click on the "gear" next to the extension and select "Enable (Workspace)".
     This will make the extension enabled only in this workspace and not interfere with other projects.
