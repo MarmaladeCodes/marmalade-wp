@@ -4,7 +4,7 @@ Tags: GraphQL, ACF, API, NextJS, Faust, Headless, Decoupled, React, Vue, Svelte,
 Requires at least: 6.0
 Tested up to: 6.4
 Requires PHP: 7.4
-Stable Tag: 2.1.1
+Stable Tag: 2.2.0
 License: GPL-3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -115,6 +115,25 @@ ACF Field Groups that did not have "graphql_types" defined AND were assigned to 
 This release is a complete re-architecture of WPGraphQL for ACF, introducing breaking changes to the GraphQL Schema and PHP API. Please read the [upgrade guide](https://acf.wpgraphql.com/upgrade-guide/) before upgrading.
 
 == Changelog ==
+
+= 2.2.0 =
+
+**New Features**
+
+- [#181](https://github.com/wp-graphql/wpgraphql-acf/pull/181): feat: update docs Date fields to link to the RFC3339 spec
+
+**Chores / Bugfixes**
+
+- [#182](https://github.com/wp-graphql/wpgraphql-acf/pull/182): fix: admin_enqueue_scripts callback should expect a possible null value passed to it
+- [#185](https://github.com/wp-graphql/wpgraphql-acf/pull/185): fix: clone field within a group field type returns null values
+- [#189](https://github.com/wp-graphql/wpgraphql-acf/pull/189): fix: image fields (and other connection fields) not properly resolving when queried asPreview
+
+= 2.1.2 =
+
+**Chores / Bugfixes**
+
+- [#178](https://github.com/wp-graphql/wpgraphql-acf/pull/178): fix: Taxonomy field returns incorrect data if set to store objects instead of IDs
+- [#174](https://github.com/wp-graphql/wpgraphql-acf/pull/174): fix: taxonomy field resolves sorted in the incorrect order
 
 = 2.1.1 =
 

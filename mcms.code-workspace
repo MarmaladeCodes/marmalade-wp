@@ -5,6 +5,11 @@
 		}
 	],
 	"settings": {
+		"cody.codebase": "https://github.com/MarmaladeCodes/marmalade-wp",
+		"cody.autocomplete.languages": {
+			"php": true,
+			"wordpress": true
+		},
 		"editor.formatOnSave": true,
 		"files.eol": "\n",
 		"files.trimTrailingWhitespace": true,

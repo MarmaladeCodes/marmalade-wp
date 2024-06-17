@@ -49,3 +49,18 @@ phpcs ./themes
 ```
 
 To fix some linting issues automatically, right click on the open php file and select "Format Document".
+
+#### Documentation Linting
+
+Use the [`markdownlint` vscode extension](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint).
+
+Or run in directly using [markdownlint-cli2](https://github.com/DavidAnson/markdownlint-cli2).
+This can be install via `asdf` as well: <https://github.com/paulo-ferraz-oliveira/asdf-markdownlint-cli2>
+
+```sh
+markdownlint-cli2 "**/*.md" "#**/plugins/**"
+```
+
+The [`.markdownlint.json`](./.markdownlint.json) file is used to configure the markdown linting rules.
+
+The [`.markdownlintignore`](./.markdownlintignore) file is used to configure the files and folders that markdownlint should ignore in VSCode.
