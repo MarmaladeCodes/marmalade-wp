@@ -50,6 +50,28 @@ jobs:
 
       # For info on Github Environments, see: https://docs.github.com/en/actions/deployment/targeting-different-environments/using-environments-for-deployment
       - name: Get environment
+        run: |
+          # See https://askubuntu.com/a/889746
+          shopt -s extglob
+
+          env=dev
+          case "${{ steps.target_branch.outputs.branch }}" in
+            develop)    read -r env <<< "dev";      ;;
+            main)       read -r env <<< "prod";     ;;
+          esac
+
+          case "${{ steps.tag.outputs.tag }}" in
+            *-dev)                                              read -r env <<< "dev";      ;;
+            +([0-9]).+([0-9]).+([0-9])?(-|+)*([0-9A-Za-z+-.]))  read -r env <<< "prod";     ;;
+          esac
+
+          echo "env_name=${env}" >> $GITHUB_OUTPUT
+
+          echo "::group::Environment"
+          echo 'environment: '${env}
+          echo "::endgroup::"
+        shell: bash
+        id: environment
 
   deploy:
     name: Deploy
