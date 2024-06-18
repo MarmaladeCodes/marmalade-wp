@@ -76,9 +76,9 @@ jobs:
           extra_args: '--report-json=./phpcs.json'
 
       - name: Update summary
+        if: steps.changed-theme.outputs.any_modified == 'true'
         run: |
           npm i -g github:10up/phpcs-json-to-md
           phpcs-json-to-md --path ./phpcs.json --output ./phpcs.md
           cat phpcs.md >> $GITHUB_STEP_SUMMARY
         shell: bash
-        if: always()
