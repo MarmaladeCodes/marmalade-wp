@@ -85,7 +85,7 @@ jobs:
 
       - name: Version and Release Setup
         run: |
-          version=$(echo <$(cat version.txt)>)
+          version=$(echo $(cat version.txt))
 
           appendage=".${{ needs.info.outputs.branch }}"
           if [[ "${{ needs.info.outputs.env_name }}" == "prod" ]]; then
