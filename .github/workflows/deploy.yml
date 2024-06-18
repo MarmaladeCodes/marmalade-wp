@@ -82,6 +82,11 @@ jobs:
     environment:
       name: ${{ needs.info.outputs.env_name }}
     steps:
+      - name: Checkout version file
+        uses: actions/checkout@v4
+        with:
+          sparse-checkout: 'version.txt'
+          sparse-checkout-cone-mode: false
 
       - name: Version and Release Setup
         run: |
